@@ -40,3 +40,23 @@ vim.api.nvim_set_hl(0, "netrwList", { fg = "#F8F8F2" })
 vim.api.nvim_set_hl(0, "netrwTree", { fg = "#6272A4" })
 vim.api.nvim_set_hl(0, "netrwMarkFile", { bg = "#44475A" })
 vim.api.nvim_set_hl(0, "netrwHide", { fg = "#6272A4" })
+require("neo-tree").setup({
+  filesystem = {
+    renderer = {
+      icons = {
+        glyphs = {
+          folder = {
+            arrow_closed = "+",   -- Plus sign for closed folder
+            arrow_open = "-",     -- Minus sign for open folder
+            default = "[ ]",      -- Empty box for folder
+            open = "[-]",         -- Open folder marker
+          },
+        },
+        show = {
+          file = false,           -- Turn off file icons entirely
+          folder_arrow = true,
+        },
+      },
+    },
+  },
+})
